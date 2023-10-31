@@ -32,7 +32,7 @@ app.put("/book/updateBook/:id", async (req, res) => {
     return res.status(500).send("No such book found.")
 })
 
-app.get("/book/:id", async (req, res) => {
+app.get("/book/getBook/:id", async (req, res) => {
     const book = await modal.findById(req.params.id);
     if(book){
         return res.status(200).send(book);
